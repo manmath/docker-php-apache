@@ -4,3 +4,9 @@
 * Platform: Ubuntu 18.04
 * PHP: 7.2
 * Apache: 2.4
+
+# Maintainer
+
+* Man Math <man@web-essentials.co>
+
+# [Changelog](CHANGELOG.md)
