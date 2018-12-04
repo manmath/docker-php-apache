@@ -12,7 +12,7 @@
 
 ```bash
 docker build -t [docker-image-name] .
-``
+```
 
 Example:
 
