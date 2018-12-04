@@ -35,6 +35,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     npm \
     locales \
     sqlite3 \
+    ca-certificates \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Set ports
