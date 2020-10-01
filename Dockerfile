@@ -27,6 +27,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     php-imagick \
     openssl \
     nano \
+    jpegoptim \
     graphicsmagick \
     imagemagick \
     ghostscript \
@@ -59,7 +60,9 @@ RUN a2enmod rewrite
 RUN a2enmod ssl
 
 # Configure PHP
-ADD default.php.ini /etc/php/7.2/apache2/conf.d/
+ADD default.php.ini /etc/php/7.2/mods-available/2020-default.ini
+RUN ln -s /etc/php/7.2/mods-available/2020-default.ini /etc/php/7.2/apache2/conf.d/
+RUN ln -s /etc/php/7.2/mods-available/2020-default.ini /etc/php/7.2/cli/conf.d/
 
 # Configure vhost
 ADD default.vhost.conf /etc/apache2/sites-enabled/000-default.conf

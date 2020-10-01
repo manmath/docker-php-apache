@@ -1,3 +1,6 @@
+## 1.0.0 `(October 01, 2020)`
+* [TASK]   Change image name and new version
+
 ## 0.0.3 `(December 20, 2019)`
 
 * [TASK]   Add php-apcu module

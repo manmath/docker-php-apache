@@ -16,7 +16,7 @@ docker build -t [docker-image-name] .
 
 Example:
 
-> docker build -t manmath-docker-apache2 .
+> docker build -t ubuntu18.04-php7.2-apache2 .
 
 # Release docker image to WE cloud
 
@@ -28,7 +28,7 @@ Example:
 
     Example:
 
-    > docker tag manmath-docker-apache2:latest dockerhub.web-essentials.co/manmath-docker-apache2:0.0.1
+    > docker tag ubuntu18.04-php7.2-apache2:latest dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:1.0.0
 
 2. Push image to cloud
 
@@ -38,7 +38,7 @@ Example:
 
     Example:
 
-    > docker push dockerhub.web-essentials.co/manmath-docker-apache2:0.0.1
+    > docker push dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:1.0.0
 
 # Working with `docker-compose`
 
@@ -50,7 +50,7 @@ Example:
     version: "3.1"
     services:
       web:
-        image: dockerhub.web-essentials.co/manmath-docker-apache2:{version}
+        image: dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:{version}
     ```
 
 # [Changelog](CHANGELOG.md)
