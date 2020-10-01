@@ -28,7 +28,7 @@ Example:
 
     Example:
 
-    > docker tag ubuntu18.04-php7.2-apache2:latest dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:1.0.0
+    > docker tag ubuntu18.04-php7.2-apache2:latest dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:7.2.0
 
 2. Push image to cloud
 
@@ -38,7 +38,7 @@ Example:
 
     Example:
 
-    > docker push dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:1.0.0
+    > docker push dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:7.2.0
 
 # Working with `docker-compose`
 
