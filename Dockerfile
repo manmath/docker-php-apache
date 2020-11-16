@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 MAINTAINER Man Math <man@web-essentials.co>
 
@@ -9,20 +9,20 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     curl \
     git \
     apache2 \
-    libapache2-mod-php7.2 \
-    php7.2-cli \
-    php7.2-json \
-    php7.2-curl \
-    php7.2-fpm \
-    php7.2-gd \
-    php7.2-ldap \
-    php7.2-mbstring \
-    php7.2-mysql \
-    php7.2-soap \
-    php7.2-sqlite3 \
-    php7.2-xml \
-    php7.2-zip \
-    php7.2-intl \
+    libapache2-mod-php7.4 \
+    php7.4-cli \
+    php7.4-json \
+    php7.4-curl \
+    php7.4-fpm \
+    php7.4-gd \
+    php7.4-ldap \
+    php7.4-mbstring \
+    php7.4-mysql \
+    php7.4-soap \
+    php7.4-sqlite3 \
+    php7.4-xml \
+    php7.4-zip \
+    php7.4-intl \
     php-apcu \
     php-imagick \
     openssl \
@@ -60,9 +60,9 @@ RUN a2enmod rewrite
 RUN a2enmod ssl
 
 # Configure PHP
-ADD default.php.ini /etc/php/7.2/mods-available/2020-default.ini
-RUN ln -s /etc/php/7.2/mods-available/2020-default.ini /etc/php/7.2/apache2/conf.d/
-RUN ln -s /etc/php/7.2/mods-available/2020-default.ini /etc/php/7.2/cli/conf.d/
+ADD default.php.ini /etc/php/7.4/mods-available/2020-default.ini
+RUN ln -s /etc/php/7.4/mods-available/2020-default.ini /etc/php/7.4/apache2/conf.d/
+RUN ln -s /etc/php/7.4/mods-available/2020-default.ini /etc/php/7.4/cli/conf.d/
 
 # Configure vhost
 ADD default.vhost.conf /etc/apache2/sites-enabled/000-default.conf

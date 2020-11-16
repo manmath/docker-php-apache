@@ -1,7 +1,7 @@
 # Overview
 
-* Platform: Ubuntu 18.04
-* PHP: 7.2
+* Platform: Ubuntu 20.04
+* PHP: 7.4
 * Apache: 2.4
 
 # Maintainer

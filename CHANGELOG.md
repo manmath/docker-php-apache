@@ -1,3 +1,6 @@
+## 7.4.0 `(November 12, 2020)`
+* [TASK]   Ubuntu 20.04 and PHP 7.4
+
 ## 7.2.0 `(October 01, 2020)`
 * [TASK]   Change image name and new version base on PHP
 
