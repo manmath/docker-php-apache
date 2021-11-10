@@ -23,6 +23,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     php7.4-xml \
     php7.4-zip \
     php7.4-intl \
+    php7.4-xdebug \
     php-apcu \
     php-imagick \
     openssl \

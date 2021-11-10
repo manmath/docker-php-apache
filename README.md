@@ -28,7 +28,7 @@ Example:
 
     Example:
 
-    > docker tag ubuntu18.04-php7.2-apache2:latest dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:7.2.0
+    > docker tag ubuntu18.04-php7.2-apache2:latest dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:latest
 
 2. Push image to cloud
 
@@ -38,7 +38,7 @@ Example:
 
     Example:
 
-    > docker push dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:7.2.0
+    > docker push dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:latest
 
 # Working with `docker-compose`
 
@@ -47,10 +47,13 @@ Example:
 2. Configure yaml file
 
     ```bash
-    version: "3.1"
+    version: "3.9"
     services:
       web:
-        image: dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:{version}
+        image: dockerhub.web-essentials.co/ubuntu20.04-php7.4-apache2:latest
     ```
 
-# [Changelog](CHANGELOG.md)
+# Available images
+
+1. dockerhub.web-essentials.co/ubuntu20.04-php7.4-apache2:latest
+2. dockerhub.web-essentials.co/ubuntu18.04-php7.2-apache2:7.2.0
