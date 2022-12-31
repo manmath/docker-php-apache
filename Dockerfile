@@ -1,6 +1,6 @@
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
-MAINTAINER Man Math <man@web-essentials.co>
+LABEL author="manmath4@gmail.com" verson="8.1" description="A flexible Docker image based on Ubuntu 22.04, Apache2 and PHP 8.1"
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -9,21 +9,22 @@ RUN apt-get update && apt-get install -yq --no-install-recommends \
     curl \
     git \
     apache2 \
-    libapache2-mod-php7.4 \
-    php7.4-cli \
-    php7.4-json \
-    php7.4-curl \
-    php7.4-fpm \
-    php7.4-gd \
-    php7.4-ldap \
-    php7.4-mbstring \
-    php7.4-mysql \
-    php7.4-soap \
-    php7.4-sqlite3 \
-    php7.4-xml \
-    php7.4-zip \
-    php7.4-intl \
-    php7.4-xdebug \
+    libapache2-mod-php8.1 \
+    php8.1-cli \
+    php8.1-common \
+    php8.1-mysql \
+    php8.1-zip \
+    php8.1-gd \
+    php8.1-mbstring \
+    php8.1-curl \
+    php8.1-xml \
+    php8.1-bcmath \
+    php8.1-fpm \
+    php8.1-ldap \
+    php8.1-soap \
+    php8.1-sqlite3 \
+    php8.1-intl \
+    php8.1-xdebug \
     php-apcu \
     php-imagick \
     openssl \
@@ -54,16 +55,16 @@ RUN rm index.html
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Set locales
-RUN locale-gen en_US.UTF-8 en_GB.UTF-8 de_DE.UTF-8 de_CH.UTF-8 fr_FR.UTF-8 km_KH
+RUN locale-gen en_US.UTF-8 en_GB.UTF-8 ja_JP.UTF-8 zh_CN.UTF-8 fr_FR.UTF-8 km_KH
 
 # Enable apache modules
 RUN a2enmod rewrite
 RUN a2enmod ssl
 
 # Configure PHP
-ADD default.php.ini /etc/php/7.4/mods-available/2020-default.ini
-RUN ln -s /etc/php/7.4/mods-available/2020-default.ini /etc/php/7.4/apache2/conf.d/
-RUN ln -s /etc/php/7.4/mods-available/2020-default.ini /etc/php/7.4/cli/conf.d/
+ADD default.php.ini /etc/php/8.1/mods-available/2023-default.ini
+RUN ln -s /etc/php/8.1/mods-available/2023-default.ini /etc/php/8.1/apache2/conf.d/
+RUN ln -s /etc/php/8.1/mods-available/2023-default.ini /etc/php/8.1/cli/conf.d/
 
 # Configure vhost
 ADD default.vhost.conf /etc/apache2/sites-enabled/000-default.conf
