@@ -6,7 +6,7 @@ docker build -t [docker-image-name] .
 
 Example:
 
-> docker build -t flex-serve .
+> docker build -t php-apache .
 
 # Release docker image to cloud
 
@@ -18,7 +18,7 @@ Example:
 
     Example:
 
-    > docker tag flex-serve:latest manmath/flex-serve:1.0
+    > docker tag php-apache:latest manmath/php-apache:1.0
 
 2. Push image to cloud
 
@@ -28,4 +28,4 @@ Example:
 
     Example:
 
-    > docker push manmath/flex-serve:1.0
+    > docker push manmath/php-apache:1.0

@@ -1,7 +1,7 @@
 # Overview
 
-* Platform: Ubuntu 22.04
-* PHP: 8.1
+* Platform: Ubuntu 24.10
+* PHP: 8.3
 * Apache: 2.4
 
 # Maintainer
@@ -15,12 +15,11 @@
 2. Configure yaml file
 
     ```bash
-    version: "3.9"
     services:
       web:
-        image: manmath/flex-serve:latest
+        image: manmath/php-apache:8.3.0
     ```
 
 # Available images
 
-1. manmath/flex-serve:8.1
+1. manmath/php-apache:8.3.0
